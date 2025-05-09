@@ -1,0 +1,28 @@
+export const metadata = {
+  title: 'Animated Pixel Icon',
+  description: '24x24 grid animated pixel icon component',
+}
+
+<ComponentPreview name="animated-pixel-icon-demo" />
+
+## Installation
+```bash filename="Terminal"
+npx shadcn@latest add "https://ui.natanz.in/r/animated-pixel-icon"
+```
+
+## Usage
+
+```tsx filename="animated-pixel-icon.tsx" showLineNumbers
+import { AnimatedPixelIcon } from '@/components/ui/animated-pixel-icon'
+
+const logo = [
+  // ...
+]
+```
+
+```tsx filename="animated-pixel-icon.tsx" showLineNumbers
+<AnimatedPixelIcon 
+  logo={logo} 
+  active={{ current: true }}
+/>
+```
