@@ -20,10 +20,7 @@ export function rehypeComponentPreview() {
 
         let source = fs.readFileSync(src, "utf8");
 
-        source = source.replaceAll(
-          `@/registry/`,
-          "@/components/"
-        );
+        source = source.replaceAll(`@/registry/`, "@/components/");
         source = source.replaceAll("export default", "export");
 
         node.children?.push(
@@ -36,11 +33,12 @@ export function rehypeComponentPreview() {
               u("element", {
                 tagName: "code",
                 data: {
-                  meta: "showLineNumbers",
+                  meta: `filename="${name}.tsx" showLineNumbers`,
                 },
                 properties: {
                   className: ["language-tsx"],
-                  ['data-line-numbers']: ""
+                  ["data-line-numbers"]: "",
+                  filename: `${name}.tsx`,
                 },
                 children: [
                   {

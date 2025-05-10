@@ -1,0 +1,31 @@
+export const metadata = {
+  title: '3D Book',
+  description: 'Book with perspective animation',
+}
+
+<ComponentPreview name="3d-book-demo" />
+
+## Installation
+```bash filename="Terminal"
+npx shadcn@latest add "https://ui.natanz.in/r/3d-book"
+```
+
+## Usage
+```tsx filename="cookbook.tsx" showLineNumbers
+import {
+  Book,
+  BookPages,
+  BookCover,
+} from '@/components/ui/3d-book'
+```
+
+```tsx filename="cookbook.tsx" showLineNumbers
+<Book
+  color={color}
+  href="/docs/components/3d-book"
+  title="3D Book Component"
+>
+  <BookPages />
+  <BookBack color={color} />
+</Book>
+```
